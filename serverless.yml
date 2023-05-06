@@ -1,0 +1,18 @@
+service: rhythm
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: prod
+  timeout: 8
+functions:
+  rhythm:
+    handler: build/main.handler
+    events:
+      - http:
+          path: /
+          method: ANY
+          cors: true
+      - http:
+          path: /{proxy+}
+          method: ANY
+          cors: true
