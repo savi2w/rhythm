@@ -1,6 +1,6 @@
 # Rhythm
 
-Rhythm is a lyrics tool for Spotify
+Rhythm is a lyrics crawler for Spotify
 
 ## License
 
