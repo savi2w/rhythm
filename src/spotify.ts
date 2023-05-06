@@ -39,7 +39,7 @@ const getLiveAccessToken = async (SP_DC: string) => {
 
   return {
     accessToken: accessToken.accessToken,
-    expirationTime: accessToken.accessTokenExpirationTimestampMs / 1000,
+    expirationTime: accessToken.accessTokenExpirationTimestampMs / 1000 - 16000,
   };
 };
 

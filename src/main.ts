@@ -1,3 +1,4 @@
+import cors from "cors";
 import * as dotenv from "dotenv";
 import express from "express";
 import serverless from "serverless-http";
@@ -8,6 +9,8 @@ import { TypedError } from "./types";
 dotenv.config();
 
 const application = express();
+
+application.use(cors());
 
 application.get("/lyrics", async (request, response) => {
   const { SP_DC, trackId } = request.query;
